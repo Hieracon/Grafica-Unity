@@ -4,8 +4,8 @@ x=-2:0.1:2;
 y=2*x.^4-x.^3+5*x.^2-10;
 %a fost creat vectorul ordonata y prin efectuarea formulei pentru fiecare element din vectorul x,y avand acelasi numar de elemente ca x
 
-h1=figure;
-%se creaza o noua fereastra figura al carei identificator este retinut in variabila h1
+figure;
+%se creaza o noua fereastra figura
 
 plot(x,y,'g-');
 %reprezentarea grafica a functiei in coordonate liniare cu o linie continua,de culoare verde,fara marcatori
@@ -16,8 +16,8 @@ plot(x,y,'c:.');
 plot(x,y,'k--^');
 %reprezentarea grafica a functiei in coordonate liniare cu o linie intrerupta,neagra,cu marcatori de tipul triunghi isoscel cu varful in sus
 
-plot(x,y,'m-.d');
-%reprezentarea grafica a functiei in coordonate liniare cu linie de tipul linie-punct,de culoare mov,cu marcatori de tipul diamant
+h1=plot(x,y,'m-.d');
+%reprezentarea grafica a functiei in coordonate liniare cu linie de tipul linie-punct,de culoare mov,cu marcatori de tipul diamant si salvarea identificatorului in variabila h1
 
 figure;
 %se creaza o noua fereastra figura
@@ -40,19 +40,19 @@ semilogx(x1,y1,'b:*');
 h3=semilogy(x1,y1,'r:s');
 %reprezentarea grafica a functiei in coordonate semilogaritmice dupa axa y cu linie punctata,rosie,cu marcatori de tipul patrat si salvarea identificatorului in variabila h3
 
-figure(h1);
+figure(1);
 %se face curenta figura a carei identificator este h1
 
 set(h1,'Color','b','LineWidth',3,'Marker','o');
 %pentru figura al carei identificator este h1 culoarea liniei a fost schimbata in albastru,grosimea liniei a fost facuta 4 si a fost adaugat marker de tipul cerc
 
-figure(h2);
+figure(2);
 %se face curenta figura a carei identificator este h2
 
 set(h2,'LineStyle','-','MarkerSize',3,'MarkerEdgeColor','r');
 %pentru figura al carei identificator este h2 schimba linia din intrerupta in continua,modifica dimensiunea marcatorului in 3 si stabileste culoarea de contur a marcatorului in rosu
 
-figure(h3);
+figure(3);
 %se face curenta figura a carei identificator este h3
 
 set(h3,'Marker','x','MarkerEdgeColor','b','MarkerFaceColor','g');
